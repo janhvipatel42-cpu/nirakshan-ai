@@ -1,0 +1,14 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pydantic==2.9.2
+python-multipart==0.0.9
+Pillow==10.4.0
+numpy==1.26.4
+reportlab==4.2.2
+
+# Optional: enables real OCR if Tesseract binary is installed on the machine.
+# Install the binary separately (see README), then this package will be used
+# automatically. If missing, Nirakshan AI falls back to a clearly labeled
+# demo OCR mode so the workflow still runs end-to-end.
+pytesseract==0.3.13

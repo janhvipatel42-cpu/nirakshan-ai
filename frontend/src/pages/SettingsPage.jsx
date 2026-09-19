@@ -1,0 +1,7 @@
+import Layout from "../components/Layout.jsx";
+import { useAuth } from "../context/AuthContext.jsx";
+
+export default function SettingsPage() {
+  const { user } = useAuth();
+  return <Layout title="Settings" subtitle="Workspace preferences and account details"><div className="settings-grid"><section className="card card-pad"><div className="eyebrow">PROFILE</div><h2 className="settings-heading">Your inspector profile</h2><div className="profile-block"><div className="profile-avatar">{user?.name?.slice(0, 1) || "I"}</div><div><strong>{user?.name || "Inspector"}</strong><p>{user?.designation || "Inspection officer"}</p></div></div><div className="field"><label>Full name</label><input value={user?.name || ""} readOnly /></div><div className="field"><label>Work email</label><input value={user?.email || ""} readOnly /></div></section><section className="card card-pad"><div className="eyebrow">WORKSPACE</div><h2 className="settings-heading">Inspection preferences</h2><label className="setting-toggle"><span><strong>Evidence-first results</strong><small>Show evidence panels by default on results.</small></span><input type="checkbox" defaultChecked /></label><label className="setting-toggle"><span><strong>Processing notifications</strong><small>Keep the pipeline visible while analysis runs.</small></span><input type="checkbox" defaultChecked /></label><div className="settings-note">Nirakshan AI results are preliminary and should be reviewed by a qualified officer.</div></section></div></Layout>;
+}

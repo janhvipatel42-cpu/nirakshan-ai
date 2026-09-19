@@ -1,0 +1,90 @@
+[
+  {
+    "rule_id": "RULE-6-1-A",
+    "name": "Manufacturer / Packer / Importer Details",
+    "requirement": "The package must declare the name and complete address of the manufacturer. Where the manufacturer is not the packer, both the manufacturer's and packer's details are required, and for imported packages the importer's name and address must also appear.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(a)",
+    "applicability": "All retail packages",
+    "field_key": "manufacturer",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-6-1-B",
+    "name": "Common / Generic Name of Commodity",
+    "requirement": "The package must state the common or generic name of the commodity contained in it, so a consumer can identify what the product is.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(b)",
+    "applicability": "All retail packages",
+    "field_key": "generic_name",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-6-1-C",
+    "name": "Net Quantity Declaration",
+    "requirement": "The package must declare the net quantity of the commodity in the standard unit of weight, measure or number, excluding packaging material.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(c)",
+    "applicability": "All retail packages",
+    "field_key": "net_quantity",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-6-1-D",
+    "name": "Month & Year of Manufacture / Packing / Import",
+    "requirement": "The package must indicate the month and year in which the commodity was manufactured, pre-packed or imported.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(d)",
+    "applicability": "All retail packages (subject to specified exemptions, e.g. bidis, incense sticks)",
+    "field_key": "mfg_date",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-6-1-E",
+    "name": "Retail Sale Price (MRP) Declaration",
+    "requirement": "The package must declare the retail sale price, printed as 'Maximum or Max. Retail Price Rs. ... inclusive of all taxes' (or the MRP-abbreviated equivalent).",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(e) read with Rule 2(m)",
+    "applicability": "All retail packages",
+    "field_key": "mrp",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-6-2",
+    "name": "Consumer Care Details",
+    "requirement": "The package must show the name, address, telephone number and email address (if available) of the person or office that can be contacted for consumer complaints.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(2)",
+    "applicability": "All retail packages",
+    "field_key": "consumer_care",
+    "check_type": "field_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-10-COO",
+    "name": "Country of Origin (Imported Packages)",
+    "requirement": "For an imported package, the country of origin/manufacture/assembly must be declared in addition to the importer's name and address.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 6(1)(a) & Rule 10(1) (import declarations), read with Consumer Protection (E-Commerce) Rules, 2020 origin-labelling requirements",
+    "applicability": "Imported retail packages only",
+    "field_key": "country_of_origin",
+    "check_type": "conditional_presence",
+    "version": "1.0",
+    "active": true
+  },
+  {
+    "rule_id": "RULE-9-1-A",
+    "name": "Legible & Prominent Declaration (Readability)",
+    "requirement": "Every declaration on the package must be legible, prominent and printed in a colour that contrasts conspicuously with the label background so an ordinary consumer can read it without difficulty.",
+    "legal_reference": "Legal Metrology (Packaged Commodities) Rules, 2011 — Rule 9(1)(a)",
+    "applicability": "All retail packages",
+    "field_key": "__readability__",
+    "check_type": "quality_derived",
+    "version": "1.0",
+    "active": true
+  }
+]
