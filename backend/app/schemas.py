@@ -10,6 +10,13 @@ class LoginRequest(BaseModel):
     role: Optional[str] = None  # "inspector" | "admin" — used to validate the tab the user picked
 
 
+class RegisterRequest(BaseModel):
+    name: str
+    email: str
+    password: str
+    designation: Optional[str] = "Legal Metrology Inspector"
+
+
 class UserOut(BaseModel):
     id: int
     name: str

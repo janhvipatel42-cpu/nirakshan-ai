@@ -40,6 +40,7 @@ async function request(path, { method = "GET", body, isForm = false } = {}) {
 
 export const api = {
   login: (payload) => request("/api/auth/login", { method: "POST", body: payload }),
+  register: (payload) => request("/api/auth/register", { method: "POST", body: payload }),
   me: () => request("/api/auth/me"),
 
   createInspection: (payload) => request("/api/inspections", { method: "POST", body: payload }),

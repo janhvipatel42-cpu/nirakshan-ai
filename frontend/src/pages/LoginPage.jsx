@@ -76,6 +76,7 @@ export default function LoginPage() {
         </form>
 
         <div className="auth-demo"><span>Demo access · {role}</span><button className="btn btn-ghost" onClick={fillDemo} type="button">Use demo account ↗</button></div>
+        <p className="auth-switch">New to Nirakshan AI? <Link to="/register">Create an inspector account</Link></p>
         <p className="auth-legal">By continuing, you agree to the inspection workspace terms.</p>
         </div>
       </div>
