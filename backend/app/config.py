@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "nirakshan-ai-sih26034-demo-secret-change-m
 TOKEN_TTL_SECONDS = 8 * 60 * 60  # 8 hour demo session
 
 UPLOAD_DIR = os.path.join(RUNTIME_DIR, "uploads")
-DEMO_ASSETS_DIR = os.path.join(BASE_DIR, "demo_assets")
+DEMO_ASSETS_DIR = os.path.join(RUNTIME_DIR, "demo_assets")
 RULES_FILE = os.path.join(BASE_DIR, "data", "compliance_rules.json")
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
