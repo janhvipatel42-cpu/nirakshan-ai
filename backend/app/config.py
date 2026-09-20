@@ -7,8 +7,10 @@ for local demo use only and must be replaced before any real deployment.
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RUNTIME_DIR = "/tmp/nirakshan-ai" if os.getenv("VERCEL") == "1" else BASE_DIR
+os.makedirs(RUNTIME_DIR, exist_ok=True)
 
-DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR}/nirakshan.db")
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{RUNTIME_DIR}/nirakshan.db")
 
 # Used only to sign short-lived demo session tokens (HMAC), NOT a production
 # secret management solution. Override via env var for anything beyond a
@@ -16,7 +18,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{BASE_DIR}/nirakshan.db")
 SECRET_KEY = os.getenv("SECRET_KEY", "nirakshan-ai-sih26034-demo-secret-change-me")
 TOKEN_TTL_SECONDS = 8 * 60 * 60  # 8 hour demo session
 
-UPLOAD_DIR = os.path.join(BASE_DIR, "uploads")
+UPLOAD_DIR = os.path.join(RUNTIME_DIR, "uploads")
 DEMO_ASSETS_DIR = os.path.join(BASE_DIR, "demo_assets")
 RULES_FILE = os.path.join(BASE_DIR, "data", "compliance_rules.json")
 
